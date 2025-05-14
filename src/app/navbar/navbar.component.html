@@ -1,20 +1,27 @@
-<nav class="navbar" [class.menu-open]="isMenuOpen">
+<nav class="navbar">
   <div class="logo">
     <a routerLink="/">Bhanu Neeli</a>
   </div>
-
-  <div class="menu-toggle" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="nav-links">
+    <button (click)="navigate('home')">Home</button>
+    <button (click)="navigate('about')">About</button>
+    <button (click)="navigate('skills')">Skills</button>
+    <button (click)="navigate('experience')">Experience</button>
+    <button (click)="navigate('projects')">Projects</button>
+    <button (click)="navigate('contact')">Contact</button>
   </div>
-
-  <ul class="nav-links">
-    <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
-    <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
-    <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
-    <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
-  </ul>
+  <div class="hamburger" (click)="toggleMenu()">
+    &#9776;
+  </div>
 </nav>
+
+<!-- Mobile menu (conditionally shown) -->
+<div class="mobile-menu" *ngIf="isMenuOpen">
+  <button (click)="navigate('home')">Home</button>
+  <button (click)="navigate('about')">About</button>
+  <button (click)="navigate('skills')">Skills</button>
+  <button (click)="navigate('experience')">Experience</button>
+  <button (click)="navigate('projects')">Projects</button>
+  <button (click)="navigate('contact')">Contact</button>
+</div>
+
