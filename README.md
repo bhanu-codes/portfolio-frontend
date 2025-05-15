@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Build this project using the following command or run the script build-gh:
+ng build --configuration production --base-href "https://bhanu-codes.github.io/portfolio-frontend/"
+
+## Deploy this project in gh pages using the following command or run the script deploy-sh:
+npx angular-cli-ghpages --dir=dist/portfolio-frontend/browser
+
+## You can access this project using the following url:
+https://bhanu-codes.github.io/portfolio-frontend/
